@@ -9,10 +9,15 @@
         body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align: center;
-            background-image: url(https://images.pexels.com/photos/29008325/pexels-photo-29008325/free-photo-of-abstract-blue-gradient-curved-shapes.jpeg?auto=compress&cs=tinysrgb&w=600);
+            background-image: url(https://images.pexels.com/photos/5125160/pexels-photo-5125160.jpeg?auto=compress&cs=tinysrgb&w=600);
             margin-top: 50px;
             background-repeat: no-repeat;
             background-size: cover;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 35px;
         }
 
         input,
@@ -45,26 +50,32 @@
             }
 
             const resultElement = document.getElementById("result");
+
+            // Apply common styles
+            resultElement.style.padding = "10px 10px";
+            resultElement.style.backgroundColor = "white";
+            resultElement.style.width = "35%";
+            resultElement.style.margin = "10px auto";
+            resultElement.style.fontSize = "20px";
+
             if (alphabetSet.size === 26) {
                 resultElement.textContent = "The sentence is a pangram.";
                 resultElement.style.color = "green";
-                resultElement.style.padding = "10px 10px";
-                resultElement.style.backgroundColor = "white";
-                resultElement.style.width = "35%";
-                resultElement.style.margin = "10px auto";
-                resultElement.style.fontSize = "20px"
             } else {
                 resultElement.textContent = "The sentence is not a pangram.";
                 resultElement.style.color = "red";
-                resultElement.style.padding = "10px 10px";
-                resultElement.style.backgroundColor = "white";
-                resultElement.style.width = "35%";
-                resultElement.style.margin = "10px auto";
-                resultElement.style.fontSize = "20px"
             }
         }
     </script>
+    <!-- pangram sentence -->
+    <!-- "The quick brown fox jumps over the lazy dog." -->
+    <!-- "Pack my box with five dozen liquor jugs." -->
+    <!-- "How vexingly quick daft zebras jump!" -->
 
+    <!-- non pangram sentence -->
+    <!-- "She enjoys reading books in her free time." -->
+    <!-- "The sun is shining brightly today." -->
+    <!-- "Learning never ends."  -->
 </body>
 
 </html>
