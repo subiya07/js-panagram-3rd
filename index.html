@@ -38,16 +38,24 @@
     <p id="result"></p>
 
     <script>
+
         function checkPangram() {
             const sentence = document.getElementById("sentenceInput").value;
+            console.log("Input Sentence:", sentence);
+
             const lowerCaseSentence = sentence.toLowerCase();
+            console.log("Lowercase Sentence:", lowerCaseSentence);
+
             const alphabetSet = new Set();
 
             for (let char of lowerCaseSentence) {
                 if (char >= 'a' && char <= 'z') {
                     alphabetSet.add(char);
+                    console.log(`Character added: ${char}`);
                 }
             }
+
+            console.log("Unique Alphabet Characters:", Array.from(alphabetSet));
 
             const resultElement = document.getElementById("result");
 
@@ -61,11 +69,14 @@
             if (alphabetSet.size === 26) {
                 resultElement.textContent = "The sentence is a pangram.";
                 resultElement.style.color = "green";
+                console.log("Result: The sentence is a pangram.");
             } else {
                 resultElement.textContent = "The sentence is not a pangram.";
                 resultElement.style.color = "red";
+                console.log("Result: The sentence is not a pangram.");
             }
         }
+
     </script>
     <!-- pangram sentence -->
     <!-- "The quick brown fox jumps over the lazy dog." -->
